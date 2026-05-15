@@ -8,10 +8,9 @@ phases:
   build:
     commands:
       - echo "Build started"
-      - cd lab11
       - mvn test
       - mvn package
 
 artifacts:
   files:
-    - lab11/target/*.jar
+    - target/*.jar
