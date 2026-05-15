@@ -5,20 +5,11 @@ phases:
     runtime-versions:
       java: corretto11
 
-  pre_build:
-    commands:
-      - echo "Starting the build process..."
-
   build:
     commands:
+      - echo "Build started"
       - cd lab11
-      - echo "Compiling and Testing code..."
       - mvn test
-
-  post_build:
-    commands:
-      - cd lab11
-      - echo "Build completed on date"
       - mvn package
 
 artifacts:
